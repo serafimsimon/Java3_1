@@ -8,11 +8,13 @@ public class Box<T extends Fruit> {
 
     /*Метод создания коробки для фруктов*/
     public Box() {
+
         this.fruitBox = new ArrayList<>();
     }
 
     /*Метод добавления фруктов в коробку */
     public void putFruit(T Fruit) {
+
         fruitBox.add(Fruit);
     }
 
@@ -32,6 +34,7 @@ public class Box<T extends Fruit> {
 
     /*Метод сравнивающий коробки*/
     public boolean compare(Box<? extends Fruit> box) {
+
         if (fruitBox.isEmpty()) {
             return false;
         }
@@ -43,6 +46,7 @@ public class Box<T extends Fruit> {
 
     /*Метод перекладывающий фрукты из одной коробки в другую*/
     public void change(Box<T> box) {
+
         fruitBox2 = new ArrayList<>();
         fruitBox2.addAll(box.fruitBox);
         System.out.println(fruitBox2);
